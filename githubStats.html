@@ -7,3 +7,32 @@
         <span id="repo-count" class="stats-numero">Cargando...</span>
     </div>
 </div>
+
+<script>
+    
+    const githubUser = 'Mariohg23'; 
+    const apiUrl = `https://api.github.com/users/${githubUser}`;
+
+    async function obtenerDatosGithub() {
+        const contadorElemento = document.getElementById('repo-count');
+
+        try {
+            const respuesta = await fetch(apiUrl);
+            
+            if (!respuesta.ok) {
+                throw new Error('Error de red o usuario no encontrado');
+            }
+
+            const datosUsuario = await respuesta.json();
+
+            contadorElemento.textContent = datosUsuario.public_repos;
+
+        } catch (error) {
+            console.error('Error al conectar con la API de GitHub:', error);
+            contadorElemento.textContent = 'N/D';
+            contadorElemento.style.color = '#ef4444';
+        }
+    }
+
+    obtenerDatosGithub();
+</script>
