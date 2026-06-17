@@ -66,3 +66,120 @@ a:hover {
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
 }
+/* Hero */
+
+.hero-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding: 2rem 5%;
+    gap: 4rem;
+}
+
+.hero-contenido {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-titulo {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 1.5rem 0;
+    color: var(--texto-principal);
+}
+
+.texto-acento {
+    color: var(--color-acento);
+}
+
+.hero-descripcion {
+    font-size: 1.25rem;
+    color: var(--texto-secundario);
+    margin-bottom: 2.5rem;
+}
+
+/* Botones */
+.hero-botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radio-bordes);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-principal {
+    background-color: var(--color-acento);
+    color: var(--bg-principal);
+}
+
+.btn-principal:hover {
+    background-color: var(--texto-principal);
+    color: var(--bg-principal);
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: var(--bg-secundario);
+    color: var(--texto-principal);
+    border: 1px solid var(--texto-secundario);
+}
+
+.btn-secundario:hover {
+    border-color: var(--texto-principal);
+    transform: translateY(-2px);
+}
+
+/* Imagen */
+.hero-imagen-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-placeholder {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, var(--bg-secundario), var(--bg-principal));
+    border: 2px solid var(--color-acento);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.2);
+}
+
+.avatar-inicial {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--color-acento);
+    font-family: var(--fuente-codigo);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-contenedor {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 4rem;
+    }
+    
+    .hero-botones {
+        justify-content: center;
+    }
+    
+    .hero-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .avatar-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
