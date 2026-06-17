@@ -1,0 +1,68 @@
+
+
+:root {
+    /* Colores inspirándome en VScode */
+    
+    /* Fondo Azul Oscuro */
+    --bg-principal: #0f172a; 
+    
+    /* Tarjetas Azul */
+    --bg-secundario: #1e293b; 
+    
+    /* Texto Gris Claro */
+    --texto-principal: #f8fafc; 
+    
+    /* TextoSec Gris Osc */
+    --texto-secundario: #94a3b8; 
+    
+    /* Resalt. Azul Elect. */
+    --color-acento: #0ea5e9; 
+    
+    /* Alertas Verde */
+    --color-exito: #10b981; 
+
+
+    /* Diseño texto */
+    
+    /* Fuente principal */
+    --fuente-ui: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Fuente monoespaciada */
+    --fuente-codigo: 'JetBrains Mono', 'Fira Code', monospace;
+
+
+    /* Margenes */
+    --radio-bordes: 8px; /* Bordes ligeramente redondeados, robustos pero modernos */
+    --espaciado-base: 1rem; /* 16px por defecto */
+}
+
+/* Pruebas */
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: var(--fuente-ui);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--texto-principal);
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--texto-principal);
+}
+
+.etiqueta-codigo {
+    font-family: var(--fuente-codigo);
+    background-color: var(--bg-secundario);
+    color: var(--color-acento);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
