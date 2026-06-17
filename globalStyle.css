@@ -182,4 +182,42 @@ a:hover {
         width: 250px;
         height: 250px;
     }
+
+    /* Tarjete Github */
+.github-stats-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--bg-secundario);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radio-bordes);
+    border: 1px solid rgba(14, 165, 233, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+}
+
+.github-stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stats-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-titulo {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stats-numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    font-family: var(--fuente-codigo);
+}
+    
 }
